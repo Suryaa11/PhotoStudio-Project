@@ -19,26 +19,26 @@ spec:
         app: photo-label
     spec:
       containers:
-        name: photo-cont
-        image: suryaa112003/photo-studio:v1.1.0
-        ports:
-          - containerPort: 3000
-        env:
-          - name: MONGO_URI
-            valueFrom:
-              secretKeyRef:
-                name: photo-secret
-                key: url
-          - name: MONGODB_AUTH_URI
-            valueFrom:
-              secretKeyRef:
-                name: photo-secret
-                key: auth_url
-          - name: MONGODB_FEEDBACK_URI
-            valueFrom:
-              secretKeyRef:
-                name: photo-secret
-                key: feedback_url
+        - name: photo-cont
+          image: suryaa112003/photo-studio:v1.1.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: photo-secret
+                  key: url
+            - name: MONGODB_AUTH_URI
+              valueFrom:
+                secretKeyRef:
+                  name: photo-secret
+                  key: auth_url
+            - name: MONGODB_FEEDBACK_URI
+              valueFrom:
+                secretKeyRef:
+                  name: photo-secret
+                  key: feedback_url
 
 ---
 apiVersion: v1
