@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: photo-label
+        app: photo-mongo-label
     spec:
       containers:
         - name: photo-mongo-cont
