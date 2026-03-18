@@ -15,5 +15,13 @@ spec:
        resource:
          name: cpu
          target:
-            type: Utilization
-            averageUtilization: 5
+           type: Utilization
+           averageUtilization: 5
+       behaviour:
+       scaleDown:
+         stabilizationWindowSeconds: 30
+         policies:
+           - type: Percent
+             value: 100
+             periodSeconds: 15
+      
