@@ -24,4 +24,3 @@ spec:
            - type: Percent
              value: 100
              periodSeconds: 15
-      
